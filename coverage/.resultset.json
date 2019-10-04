@@ -2,6 +2,7 @@
   "RSpec": {
     "coverage": {
       "/home/placid-widget-2253/tic-tac-toe-rb-online-web-sp-000/lib/tic_tac_toe.rb": [
+<<<<<<< HEAD
         null,
         null,
         1,
@@ -170,5 +171,11 @@
       ]
     },
     "timestamp": 1568326852
+=======
+
+      ]
+    },
+    "timestamp": 1568323902
+>>>>>>> 1663405a7665a2583c7b2e7c58bdb3a984d5e7d4
   }
 }

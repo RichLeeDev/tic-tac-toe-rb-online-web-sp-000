@@ -22,7 +22,11 @@ def input_to_index(input)
   user_input = input.to_i - 1
 end
 
+<<<<<<< HEAD
 def move(board, index, current_player)
+=======
+def move(board, index, current_player = "X")
+>>>>>>> 1663405a7665a2583c7b2e7c58bdb3a984d5e7d4
   board[index] = current_player
 end
 
@@ -38,6 +42,7 @@ else
 end
 end
 
+<<<<<<< HEAD
 # def turn(board)
 #   puts "Please enter 1-9:"
 #   input = gets.strip
@@ -61,6 +66,19 @@ def turn(board)
   else
     turn(board)
   end
+=======
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  user_input = input_to_index(input)
+  if valid_move?(board,user_input) == true
+    move(board,user_input,current_player(board))
+  else
+    puts "Please enter 1-9:"
+    input = gets.strip
+  end
+  display_board(board)
+>>>>>>> 1663405a7665a2583c7b2e7c58bdb3a984d5e7d4
 end
 
 def turn_count(board)
@@ -127,6 +145,7 @@ def winner(board)
   end
 end
 
+<<<<<<< HEAD
 # def over?(board)
 #   if won?(board) == true || draw?(board) == true || full?(board) == true
 #     return true
@@ -163,3 +182,26 @@ def play(board)
     return nil
   end
 end
+=======
+def over?(board = false)
+  if won? == true || draw? == true || full? == true
+    return true
+  else
+    return false
+end
+end
+
+def play(board)
+  until won?(board) == true || won?(board) != false
+    turn(board)
+  end
+  if winner(board)
+    puts "Congratulations!"
+  elsif draw?(board)
+    puts "Draw!"
+  else
+    return nil
+  end
+
+end
+>>>>>>> 1663405a7665a2583c7b2e7c58bdb3a984d5e7d4
